@@ -13,7 +13,8 @@
   <body>
     <h1>jQuery simple tests</h1>
 
-    <div id="content"></div>
+    <div id="list" class="page"></div>
+    <div id="item" class="page"></div>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -24,7 +25,13 @@
     <script>
       $(document).ready(function(){
         var id=$(document).getUrlParam("id");
-        $('#content').html('id parameter is '+id)
+        
+        if(id) {
+           $('#item').html('id parameter is '+id)
+        } else {
+           $('#list').html('show table data here')
+        }
+       
       });
       
     </script>
