@@ -27,7 +27,8 @@
         var id=$(document).getUrlParam("id");
         
         if(id) {
-           $('#item').html('id parameter is '+id)
+           //$('#item').html('id parameter is '+id)
+          $('#item').load('item.html')
         } else {
            $('#list').html('show table data here')
         }
